@@ -7,7 +7,7 @@ namespace :ci do
     end
 
     task :cucumber => :cucumber_report_cleanup do
-      ENV["CUCUMBER_OPTS"] = "#{ENV['CUCUMBER_OPTS']} --format CI::Reporter::Cucumber"
+      ENV["CUCUMBER_OPTS"] = "#{ENV['CUCUMBER_OPTS']} --format CI::Reporter::Cucumber -o /dev/null"
     end
   end
 end
